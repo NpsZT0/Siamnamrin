@@ -63,13 +63,13 @@
 
         <div class="absolute flex justify-center space-x-2 hs-carousel-pagination bottom-3 start-0 end-0">
             <span
-                class="border border-gray-400 rounded-full cursor-pointer hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3"></span>
+                class="border border-gray-300 rounded-full cursor-pointer hs-carousel-active:bg-blue-500 hs-carousel-active:border-blue-500 size-3"></span>
             <span
-                class="border border-gray-400 rounded-full cursor-pointer hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3"></span>
+                class="border border-gray-300 rounded-full cursor-pointer hs-carousel-active:bg-blue-500 hs-carousel-active:border-blue-500 size-3"></span>
             <span
-                class="border border-gray-400 rounded-full cursor-pointer hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3"></span>
+                class="border border-gray-300 rounded-full cursor-pointer hs-carousel-active:bg-blue-500 hs-carousel-active:border-blue-500 size-3"></span>
             <span
-                class="border border-gray-400 rounded-full cursor-pointer hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3"></span>
+                class="border border-gray-300 rounded-full cursor-pointer hs-carousel-active:bg-blue-500 hs-carousel-active:border-blue-500 size-3"></span>
         </div>
     </div>
 </template>
