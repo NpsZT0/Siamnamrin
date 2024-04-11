@@ -1,0 +1,68 @@
+[
+    {
+        "name": "หน้าแรก",
+        "href": "/"
+    },
+    {
+        "name": "สินค้าและบริการ",
+        "children": [
+            {
+                "name": "รางระบายน้ำพร้อมฝาปิด คอนกรีตสำเร็จรูป",
+                "href": "/products_service/product_1"
+            },
+            {
+                "name": "แผ่นสแลทปูพื้นคอกสำเร็จรูป",
+                "href": "/products_service/product_2"
+            },
+            {
+                "name": "สแลทพ่อพันธุ์",
+                "href": "/products_service/product_3"
+            },
+            {
+                "name": "สแลทคอกคลอด",
+                "href": "/products_service/product_4"
+            },
+            {
+                "name": "ผนังคอกคลอด",
+                "href": "/products_service/product_5"
+            },
+            {
+                "name": "ผนังคอกหมูขุน",
+                "href": "/products_service/product_6"
+            },
+            {
+                "name": "ผนังสำเร็จรูป ระบบ Knockdown สำหรับกั้นคอก",
+                "href": "/products_service/product_7"
+            },
+            {
+                "name": "ระบบ เสา คาน ตอม่อ สำเร็จรูป",
+                "href": "/products_service/product_8"
+            },
+            {
+                "name": "เสาเข็ม แผ่นพื้น สิ้นค้าจิปาถะ",
+                "href": "/products_service/product_9"
+            },
+            {
+                "name": "รั้วและกำแพงกันดิน คอนกรีตสำเร็จรูป",
+                "href": "/products_service/product_10"
+            }
+        ],
+        "href": "/product_service"
+    },
+    {
+        "name": "ออกแบบและก่อสร้าง",
+        "href": "/design_build"
+    },
+    {
+        "name": "ผลการดำเนินงาน",
+        "href": "/operation_result"
+    },
+    {
+        "name": "เกี่ยวกับเรา",
+        "href": "/about"
+    },
+    {
+        "name": "ติดต่อเรา",
+        "href": "/contact_us"
+    }
+]
