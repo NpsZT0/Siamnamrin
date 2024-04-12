@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/nuxt"
-
 useHead({
   title: 'My App',
   meta: [
@@ -27,7 +25,6 @@ const navigation = router;
           <Navbar v-bind:navigation="navigation" />
           <!-- Page content here -->
           <NuxtPage />
-          <SpeedInsights />
           <!-- Footer -->
           <Footer />
         </div>
