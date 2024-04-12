@@ -37,7 +37,10 @@ export default defineNuxtConfig({
   },
   webVitals: {
     // provider: '', // auto detectd
-    debug: false,
+    ga: { id: 'G-DTKZ6JW627' },
+    provider: 'api',
+    api: { url: '/api/web-vitals' },
+    debug: true, // debug enable metrics reporting on dev environments
     disabled: false
   }
 })
