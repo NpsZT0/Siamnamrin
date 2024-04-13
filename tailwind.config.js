@@ -10,87 +10,60 @@ export default {
     './node_modules/preline/preline.js',
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+      
+      '2lg': '1240px',
+      // => @media (min-width: 1240px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
     extend: {
       fontFamily: {
         kanit: ['Kanit', 'sans-serif'],
         prompt: ['Prompt', 'sans-serif'],
         noto: ['Noto Sans Thai', 'sans-serif']
       },
+      keyframes: {
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "white"
+          }
+        }
+      },
+      animation: {
+        typing: "typing 2s steps(20) infinite alternate, blink .7s infinite"
+      },
+      backgroundSize: ({ theme }) => ({
+        auto: 'auto',
+        cover: 'cover',
+        contain: 'contain',
+        ...theme('spacing')
+      }),
     },
-    // colors: {
-    //   'delft_blue': {
-    //     DEFAULT: '#1d3461',
-    //     100: '#060a14',
-    //     200: '#0c1527',
-    //     300: '#121f3b',
-    //     400: '#172a4f',
-    //     500: '#1d3461',
-    //     600: '#2f549d',
-    //     700: '#4e78ca',
-    //     800: '#89a5dc',
-    //     900: '#c4d2ed'
-    //   },
-    //   'polynesian_blue': {
-    //     DEFAULT: '#1f487e',
-    //     100: '#060f19',
-    //     200: '#0c1d33',
-    //     300: '#122c4c',
-    //     400: '#193a66',
-    //     500: '#1f487e',
-    //     600: '#2d69b8',
-    //     700: '#558dd6',
-    //     800: '#8eb3e4',
-    //     900: '#c6d9f1'
-    //   },
-    //   'lapis_lazuli': {
-    //     DEFAULT: '#376996',
-    //     100: '#0b151e',
-    //     200: '#162a3c',
-    //     300: '#213f59',
-    //     400: '#2c5477',
-    //     500: '#376996',
-    //     600: '#4c88bd',
-    //     700: '#79a6cd',
-    //     800: '#a6c4de',
-    //     900: '#d2e1ee'
-    //   },
-    //   'silver_lake_blue': {
-    //     DEFAULT: '#6290c8',
-    //     100: '#0f1c2c',
-    //     200: '#1f3858',
-    //     300: '#2e5483',
-    //     400: '#3e71af',
-    //     500: '#6290c8',
-    //     600: '#80a5d2',
-    //     700: '#a0bcde',
-    //     800: '#c0d2e9',
-    //     900: '#dfe9f4'
-    //   },
-    //   'vista_blue': {
-    //     DEFAULT: '#829cbc',
-    //     100: '#161f29',
-    //     200: '#2c3d52',
-    //     300: '#425c7b',
-    //     400: '#597ba4',
-    //     500: '#829cbc',
-    //     600: '#9aafc9',
-    //     700: '#b3c3d6',
-    //     800: '#cdd7e4',
-    //     900: '#e6ebf1'
-    //   },
-    //   'alice_blue': {
-    //     DEFAULT: '#ecf5ff',
-    //     100: '#002e62',
-    //     200: '#005bc4',
-    //     300: '#278cff',
-    //     400: '#89c0ff',
-    //     500: '#ecf5ff',
-    //     600: '#eff6ff',
-    //     700: '#f3f8ff',
-    //     800: '#f7fbff',
-    //     900: '#fbfdff'
-    //   }
-    // }
   },
   plugins: [
     require("daisyui"),
@@ -100,7 +73,7 @@ export default {
     themes: [
       {
         mytheme: {
-          "primary": "#1d3461",
+          "primary": "#0248d4",
           "primary-content": "#fbfdff",
 
           "secondary": "#1f487e",

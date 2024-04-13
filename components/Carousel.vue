@@ -2,35 +2,35 @@
     <div data-hs-carousel='{
     "loadingClasses": "opacity-0",
     "isAutoPlay": true
-  }' class="relative z-0 h-fit">
+  }' class="relative z-0 h-fit init">
         <div class="hs-carousel relative overflow-hidden w-full min-h-[200px] lg:min-h-[300px] bg-white rounded-none">
             <div
-                class="absolute top-0 bottom-0 flex transition-transform duration-700 opacity-0 h-fit hs-carousel-body start-0 flex-nowrap">
-                <div class="hs-carousel-slide">
+                class="absolute top-0 bottom-0 flex transition-transform duration-700 h-fit hs-carousel-body start-0 flex-nowrap">
+                <div class="hs-carousel-slide active">
                     <div class="flex justify-center bg-gray-100 h-fit">
-                        <NuxtImg
+                        <img
                             src="https://images.pexels.com/photos/194096/pexels-photo-194096.jpeg?cs=srgb&dl=pexels-miguel-%C3%A1-padri%C3%B1%C3%A1n-194096.jpg&fm=jpg&_gl=1*6m6e8s*_ga*MTY1MDI0NTU2My4xNzEyODExNTcy*_ga_8JE65Q40S6*MTcxMjgxMTU3MS4xLjEuMTcxMjgxMTU3NS4wLjAuMA.."
-                            class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
+                            alt="" class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
                     </div>
                 </div>
                 <div class="hs-carousel-slide">
                     <div class="flex justify-center bg-gray-200 h-fit">
-                        <NuxtImg src="https://images.pexels.com/photos/9685868/pexels-photo-9685868.jpeg"
-                            class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
+                        <img src="https://images.pexels.com/photos/9685868/pexels-photo-9685868.jpeg"
+                        alt="" class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
                     </div>
                 </div>
                 <div class="hs-carousel-slide">
                     <div class="flex justify-center bg-gray-300 h-fit">
-                        <NuxtImg
+                        <img
                             src="https://images.pexels.com/photos/3618480/pexels-photo-3618480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
+                            alt="" class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
                     </div>
                 </div>
                 <div class="hs-carousel-slide">
                     <div class="flex justify-center bg-gray-300 h-fit">
-                        <NuxtImg
+                        <img
                             src="https://images.pexels.com/photos/2431402/pexels-photo-2431402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
+                            alt="" class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
                     </div>
                 </div>
             </div>
