@@ -14,10 +14,10 @@ console.log("rout", route.fullPath)
       <div class="mb-32 lg:col-span-8">
         <article class="flex-grow mx-8 mb-8 break-words ">
           <section class="py-8 border-b border-gray-200">
-            <h1 class="text-4xl font-bold text-start">
+            <h1 class="text-3xl font-bold sm:text-4xl text-start">
               สินค้าและบริการ
             </h1>
-            <p class="text-lg text-gray-500 text-start">
+            <p class="text-gray-500 text-start">
               สร้างโลกของความแข็งแกร่งและคุณภาพด้วยวัสดุก่อสร้างจากเรา!
               เราเสนอสินค้าที่มีคุณภาพสูงที่สุดในวงการและมาพร้อมกับความคุ้มค่าที่ยอดเยี่ยม
               ไม่ว่าคุณกำลังก่อสร้างบ้านหรือโครงการใหญ่ ๆ เรามีทุกอย่างที่คุณต้องการเพื่อให้โครงการของคุณประสบความสำเร็จ
@@ -25,7 +25,7 @@ console.log("rout", route.fullPath)
           </section>
           <section class="mt-8">
             <h2 id="รางระบายน้ำพร้อมฝาปิด-คอนกรีตสำเร็จรูป"
-              class="text-3xl font-bold text-start scroll-mt-[calc(40px+var(--header-height))] lg:scroll-mt-[calc(40px+var(--header-height))]">
+              class="text-2xl sm:text-3xl font-bold text-start scroll-mt-[calc(40px+var(--header-height))] lg:scroll-mt-[calc(40px+var(--header-height))]">
               <a class="relative border-none group lg:-ml-2 lg:pl-2" href="#รางระบายน้ำพร้อมฝาปิด-คอนกรีตสำเร็จรูป">
                 <span
                   class="absolute items-center hidden -ml-8 border-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 lg:flex">&ZeroWidthSpace;
@@ -40,13 +40,13 @@ console.log("rout", route.fullPath)
                 </span>รางระบายน้ำพร้อมฝาปิด คอนกรีตสำเร็จรูป
               </a>
             </h2>
-            <p class="text-lg text-gray-500 text-start">
+            <p class="text-gray-500 text-start">
               รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน
               สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด
               ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก
             </p>
 
-            <h4 class="mt-4 text-xl font-semibold text-start">
+            <h4 class="mt-4 text-lg font-semibold sm:text-xl text-start">
               ตัวอย่าง รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของ บริษัทสยามน้ำรินจำกัด
             </h4>
             <ul class="leading-7 ">
@@ -81,7 +81,7 @@ console.log("rout", route.fullPath)
           <br>
           <section>
             <h2 id="แผ่นสแลทปูพื้นคอกสำเร็จรูป"
-              class="text-3xl font-bold text-start scroll-mt-[calc(40px+var(--header-height))] lg:scroll-mt-[calc(40px+var(--header-height))]">
+              class="text-2xl sm:text-3xl font-bold text-start scroll-mt-[calc(40px+var(--header-height))] lg:scroll-mt-[calc(40px+var(--header-height))]">
               <a class="relative border-none group lg:-ml-2 lg:pl-2" href="#แผ่นสแลทปูพื้นคอกสำเร็จรูป">
                 <span
                   class="absolute items-center hidden -ml-8 border-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 lg:flex">&ZeroWidthSpace;
@@ -96,7 +96,7 @@ console.log("rout", route.fullPath)
                 </span>แผ่นสแลทปูพื้นคอกสำเร็จรูป
               </a>
             </h2>
-            <p class="text-lg text-gray-500 text-start">
+            <p class="text-gray-500 text-start">
               รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ
               แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน
               มีแบบฝาปิด
@@ -135,7 +135,7 @@ console.log("rout", route.fullPath)
       </div>
 
       <!-- Right menu -->
-      <div class="order-2 h-auto lg:col-span-3 lg:order-last">
+      <div class="order-last hidden h-auto lg:col-span-3 lg:block">
         <aside
           class="lg:col-span-2 order-last sticky top-[--header-height] -mx-4 sm:-mx-6 px-4 sm:px-6 lg:px-4 lg:-mx-4 overflow-x-hidden max-h-[calc(100vh-var(--header-height))] z-0">
           <!-- Navbar menu content here -->
