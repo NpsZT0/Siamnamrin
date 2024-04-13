@@ -3,6 +3,7 @@ const navigation = useRouterJson()
 
 const route = useRoute()
 console.log("rout", route.fullPath)
+const blueprintsProd1 = useBlueprintLinks("product1")
 </script>
 
 <template>
@@ -12,7 +13,7 @@ console.log("rout", route.fullPath)
 
 
       <div class="mb-32 lg:col-span-8">
-        <article class="flex-grow mx-8 mb-8 break-words ">
+        <article class="flex-grow mb-8 break-words sm:mx-8 ">
           <section class="py-8 border-b border-gray-200">
             <h1 class="text-3xl font-bold sm:text-4xl text-start">
               สินค้าและบริการ
@@ -49,33 +50,14 @@ console.log("rout", route.fullPath)
             <h4 class="mt-4 text-lg font-semibold sm:text-xl text-start">
               ตัวอย่าง รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของ บริษัทสยามน้ำรินจำกัด
             </h4>
-            <ul class="leading-7 ">
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">
-                <NuxtLink to="#">ฝารางระบายน้ำ IB - C7 รูเหลี่ยม</NuxtLink>
+            <ul v-for="blueprint in blueprintsProd1" class="leading-7 ">
+              <li class="flex text-gray-500 hover:text-primary w-fit h-fit">
+                <NuxtLink :to="blueprint.href">{{ blueprint.name }}
+                </NuxtLink><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-2 h-2 min-w-2 min-h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
               </li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำ IB – 20 ประกอบฝา</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ฝาปิดสำหรับรางระบายน้ำขนาดภายในกว้าง 30 ซม. (มีร่องมือจับ)</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ฝารางสำหรับรางกว้างภายใน 30 ซ.ม. แบบมีร่องระบายน้ำ ขนาด 40x50x5 ซ.ม. ใช้ 2 ฝา / 1 ราง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รูปแบบประกอบฝากับรางระบายน้ำแบบ (วางบนบ่า)</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ฝาปิดสำหรับรางระบายน้ำกว้าง 50 ซม. (ฝาแบบทึบมีร่องจับ) IB – C3</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ฝารางแบบมีร่องระบายน้ำ IB – C4 ใช้ 3 ฝา / 1ราง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รูปแบบประกอบฝากับรางระบายน้ำแบบ (วางบนบ่า)</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำ IB-T20 ขนาด 22X100X20 ซม. / วิธีการติดตั้งรางระบายน้ำ SNR รุ่นฝาเหล็กด้านล่าง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำ IB-T30 ขนาด 30X100X30 ซม. / วิธีการติดตั้งรางระบายน้ำ SNR รุ่นฝาเหล็กด้านล่าง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำ IB-T35 ขนาด 30X100X50 ซม. / วิธีการติดตั้งรางระบายน้ำ SNR รุ่นฝาเหล็กด้านล่าง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำ IB-T50 ขนาด 50X100X50 ซม. / วิธีการติดตั้งรางระบายน้ำ SNR รุ่นฝาเหล็กด้านล่าง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำ ขนาดภายใน 15X100X15 ซม. / วิธีการติดตั้งรางระบายน้ำ SNR รุ่นฝาเหล็กด้านล่าง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำ IB-T30P / วิธีการติดตั้งรางระบายน้ำ SNR รุ่นฝาเหล็กด้านล่าง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำ IB-T30P ขนาด 50X100X50 ซม. (มีบ่าเหล็กฉาก)</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ฝารางขนาด 67X50X10 ซม. (สำหรับรางกว้าง 50 ซม. ตกบ่า)</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ฝารางระบายน้ำแบบตะแกรงเหล็ก IB-C9 ชนิดมีบ่าฉาก</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำ ขนาดภายใน 30X95X30 ซม. ใส่ฝาตะแกรงแบบบ่าฉาก</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ฝารางแบบตะแกรงเหล็ก IB-C8 แบบวางบนบ่าราง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รางระบายน้ำขนาดภายใน 0.30X0.95X0.30 ซม. มีฝาบ่ารับฝาตะแกรง</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ฝาปิดรางระบายน้ำร่อง V แบบรับน้ำหนัก IB – C6</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ภาพประกอบฝาราง IB-C6 กับราง IB-T30P และ IB-T35P</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">ฝาปิดรางระบายน้ำชนิดรับน้ำหนัก IB-C5</li>
-              <li class="text-gray-500 hover:text-primary w-fit h-fit">รูปแบบลักษณะการวางฝารับน้ำหนัก บนรางระบายน้ำแบบมีบ่ารับฝา</li>
             </ul>
           </section>
           <br>
