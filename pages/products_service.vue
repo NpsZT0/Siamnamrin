@@ -39,7 +39,7 @@ const toggleTableOfContents = (currentClicked: boolean) => {
 </script>
 
 <template>
-  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+  <div class="container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
     <div class="flex flex-col lg:grid lg:grid-cols-11 lg:gap-8">
 
       <!-- Article 1 -->
@@ -263,18 +263,18 @@ const toggleTableOfContents = (currentClicked: boolean) => {
                 </svg>
               </span>
             </button>
-            <ul :class="isClicked ? 'hidden space-y-1 lg:block' : 'space-y-1 lg:block'">
+            <ul :class="isClicked ? 'space-y-1 lg:block' : 'hidden space-y-1 lg:block'">
               <li v-for="content in tableOfContents"
-                :class="isClicked ? 'hidden space-y-1 lg:block' : 'space-y-1 lg:block'">
+                :class="isClicked ? 'space-y-1 lg:block' : 'hidden space-y-1 lg:block'">
                 <!-- <div v-if="route.fullPath === content.href" class="lg:block"> -->
                 <NuxtLink :key="content.name" :to="content.href"
-                  :class="route.fullPath === content.href ? 'block text-primary truncate text-sm/6' : 'block text-gray-500 truncate text-sm/6 hover:text-gray-700'">
+                  :class="route.fullPath === content.href ? 'block text-primary truncate text-sm/6' : 'block text-gray-600 truncate text-sm/6 hover:text-gray-700'">
                   {{ content.name }}
                 </NuxtLink>
                 <ul v-if="content.children" class="space-y-1">
                   <li v-for="child in content.children" class="ml-3 space-y-1">
                     <NuxtLink :key="child.name" :to="child.href"
-                      :class="route.fullPath === child.href ? 'block text-primary truncate text-sm/6' : 'block text-gray-500 truncate text-sm/6 hover:text-gray-700'">
+                      :class="route.fullPath === child.href ? 'block text-primary truncate text-sm/6' : 'block text-gray-600 truncate text-sm/6 hover:text-gray-700'">
                       {{ child.name }}
                     </NuxtLink>
                   </li>

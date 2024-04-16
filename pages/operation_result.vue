@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <div class="container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="flex flex-col lg:grid lg:grid-cols-11 lg:gap-8">
             <article class="mb-32 lg:col-span-8">
                 <div class="flex-grow mb-8 break-words sm:mx-8 ">
