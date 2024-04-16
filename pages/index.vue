@@ -8,8 +8,9 @@ useHead({
             property: "og:description"
         },
         {
-            property: "og:title",
+            name: 'title',
             content: "บริษัท สยามน้ำริน จำกัด",
+            property: "og:title",
         },
     ],
     bodyAttrs: {
@@ -20,14 +21,14 @@ useHead({
 </script>
 
 <template>
-    <div class="h-full min-h-[600px]">
+    <div class="mx-auto">
         <!-- Slider -->
         <Carousel />
         <!-- End Slider -->
         <div class="w-auto h-auto p-8">
             <section>
                 <h1 class="text-4xl font-extrabold text-primary">
-                    บริษัทสยามน้ำรินจำกัด
+                    บริษัท สยามน้ำริน จำกัด
                 </h1>
                 <p id="P1" class="text-xl whitespace-pre-line">
                     จำหน่าย และให้บริการ สินค้า <strong>คอนกรีต</strong> สำเร็จรูป

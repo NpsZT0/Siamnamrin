@@ -4,13 +4,13 @@
             "size": "20×100×20",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "24×50×5",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -18,27 +18,27 @@
             "size": "20×100×25",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "25×50×5",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
         "uditch_1": {
             "size": "30×100×25",
             "thickness": "10",
-            "details": "(เหล็กโผล่ 10 cm.)",
-            "unit": "cm"
+            "details": "(เหล็กโผล่ 10 ซม.)",
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "28×46×5",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -46,13 +46,13 @@
             "size": "30×100×30",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "28×47×5",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -60,27 +60,27 @@
             "size": "30×100×30",
             "thickness": "",
             "details": "(รับน้ำหนัก)",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "30×100×5",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
         "uditch_1": {
             "size": "30×100×30",
             "thickness": "10",
-            "details": "(โผล่เหล็ก 5 cm.)",
-            "unit": "cm"
+            "details": "(โผล่เหล็ก 5 ซม.)",
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "31×48×7",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -88,13 +88,13 @@
             "size": "30×100×50",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "33×60×6",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -102,13 +102,13 @@
             "size": "50×100×50",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "34×100×3.75",
             "thickness": "",
             "details": "(ฝาตะแกรงเหล็ก)",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -116,13 +116,13 @@
             "size": "50×100×50",
             "thickness": "10",
             "details": "(มีบ่า)",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "35×50×5",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -130,13 +130,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "35×100×10",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -144,13 +144,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "36×50×4",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -158,13 +158,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "36×50×5",
             "thickness": "",
             "details": "(ทึบ)",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -172,13 +172,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "36×100×3.8",
             "thickness": "",
             "details": "(ฝาตะแกรงเหล็ก)",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -186,13 +186,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "37×100",
             "thickness": "",
             "details": "(ตะแกรงเหล็ก)",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -200,13 +200,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "38.2×100×35",
             "thickness": "",
             "details": "(ฝาตะแกรงเหล็ก)",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -214,13 +214,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "0.50×0.50×0.05",
             "thickness": "",
             "details": "(ตะแกรงเหล็ก)",
-            "unit": "m"
+            "unit": "ม"
         }
     },
     {
@@ -228,13 +228,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "57×207×10",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -242,13 +242,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "59×100",
             "thickness": "",
             "details": "(ตะแกรงเหล็ก)",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -256,13 +256,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "65×50×10",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         }
     },
     {
@@ -270,13 +270,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "1.00×1.00×0.07",
             "thickness": "",
             "details": "(ตะแกรงเหล็ก)",
-            "unit": "m"
+            "unit": "ม"
         }
     },
     {
@@ -284,13 +284,13 @@
             "size": "-",
             "thickness": "",
             "details": "",
-            "unit": "cm"
+            "unit": "ซม"
         },
         "uditch_2": {
             "size": "107.5×107.5 ",
             "thickness": "",
             "details": "(ฝาตะแกรงเหล็ก)",
-            "unit": "cm"
+            "unit": "ซม"
         }
     }
 ]
