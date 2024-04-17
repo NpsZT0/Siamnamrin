@@ -4,7 +4,7 @@ const navigation = router;
 </script>
 
 <template>
-  <div class="container font-noto bg-delft_blue-900 scroll-smooth">
+  <div class="container font-noto bg-delft_blue-900">
     <div class="absolute inset-x-0 top-0 z-[1] w-full h-full">
       <div class="drawer">
 

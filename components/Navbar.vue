@@ -25,7 +25,7 @@ const route = useRoute()
             <ul v-for="item in navigation" class="px-1 menu menu-horizontal">
                 <li>
                     <!-- v-if="!item.children" -->
-                    <div v-if="route.fullPath === item.href">
+                    <div v-if="route.path === item.href">
                         <NuxtLink :key="item.name" :to=item.href class="text-base text-primary">
                             {{ item.name }}
                         </NuxtLink>

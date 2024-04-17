@@ -4,5 +4,5 @@ import { SpeedInsights } from '@vercel/speed-insights/vue';
 
 <template>
     <slot />
-    <SpeedInsights />
+    <!-- <SpeedInsights /> -->
 </template>

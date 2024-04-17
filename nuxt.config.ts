@@ -3,8 +3,11 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
     },
   },
+
   devtools: {
     enabled: true,
 
@@ -12,7 +15,9 @@ export default defineNuxtConfig({
       enabled: true
     }
   },
+
   css: ['~/assets/css/main.css'],
+
   plugins: ["~/plugins/preline.client.ts"],
 
   postcss: {
@@ -40,10 +45,11 @@ export default defineNuxtConfig({
     },
     dir: 'assets/images',
   },
+
   webVitals: {
     // provider: '', // auto detectd
-    ga: { id: 'G-DTKZ6JW627' },
     debug: false, // debug enable metrics reporting on dev environments
     disabled: false
-  }
+  },
+
 })
