@@ -1,3 +1,137 @@
+<script>
+// useHead({
+//   title: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
+//   meta: [
+//     {
+//       property: "og:title",
+//       content: "รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด",
+//     },
+//     {
+//       name: 'description',
+//       content: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
+//     },
+//     {
+//       property: "og:description",
+//       content: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
+//     },
+//   ],
+//   bodyAttrs: {
+//     class: ''
+//   },
+//   // script: [{ innerHTML: 'console.log(\'Hello world\')' }]
+// })
+
+import blue_print_product1 from '../static/json/blue_prints/blue_print_product1.json'
+import detail_table_product1 from '../static/json/detail_tables/detail_table_product1.json'
+import detail_table_product2 from '../static/json/detail_tables/detail_table_product2.json'
+import table_of_content from '../static/json/table_of_content.json'
+
+export default {
+  setup() {
+    useSeoMeta({
+      viewport: 'width=device-width, initial-scale=1.0',
+
+      title: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
+      description: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
+      keywords: 'Precast Concrete',
+
+      ogType: 'website',
+      ogTitle: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
+      ogDescription: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
+      ogImage: '/assets/images/products_service/1/2.jpg',
+      ogUrl: 'https://www.siamnamrin.com/products_service',
+      ogSiteName: 'siamnamrin.com',
+      ogLocale: 'th_TH',
+
+      // twitterCard: 'summary_large_image',
+      // twitterSite: 'siamnamrin.com',
+      // twitterTitle: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
+      // twitterDescription: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
+    })
+    const blueprintsProd1 = blue_print_product1
+    const detailsProduct1 = detail_table_product1
+    const detailsProduct2 = detail_table_product2
+    const tableOfContents = table_of_content
+    const route = useRoute()
+
+    const classScrollH2 = ref('scroll-mt-[calc(40px+40px+var(--header-height))] lg:scroll-mt-[calc(40px+var(--header-height))]')
+    const classScrollH4 = ref('scroll-mt-[calc(30px+30px+var(--header-height))] lg:scroll-mt-[calc(30px+var(--header-height))]')
+
+    const isClicked = ref(false)
+
+    const carouselLinks = [
+      {
+        src: "/images/products_service/1/2.jpg",
+        alt: "รางน้ำคอนกรีตสำเร็จรูป",
+      },
+      {
+        src: "/images/products_service/2/5.jpg",
+        alt: "ผนังสำเร็จรูป ระบบ Knockdown",
+      },
+      {
+        src: "/images/products_service/3/2.jpg",
+        alt: "แสลทปูพื้นคอนกรีตสำเร็จรูป",
+      },
+      {
+        src: "/images/products_service/4/3.jpg",
+        alt: "ระบบ เสา คาน ตอม่อ สำเร็จรูป",
+      },
+      {
+        src: "/images/products_service/5/5.jpg",
+        alt: "สแลทพ่อพันธุ์ สแลทคอกคลอด ผนังคอกหมูขุน",
+      },
+      {
+        src: "/images/products_service/6/4.jpg",
+        alt: "รั้วและกำแพงคอนกรีตสำเร็จรูป",
+      },
+    ]
+    return {
+      blueprintsProd1,
+      detailsProduct1,
+      detailsProduct2,
+      tableOfContents,
+      route,
+      classScrollH2,
+      classScrollH4,
+      isClicked,
+      carouselLinks,
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const scrollToTopButton = this.$refs.scrollToTopButton;
+      if (window.pageYOffset > 100) {
+        scrollToTopButton.style.display = 'block';
+        scrollToTopButton.style.transition = 'transform 0.5s ease'; // Adjust duration and easing as needed
+        scrollToTopButton.style.transform = 'scale(1)'; // Example transform
+      } else {
+        scrollToTopButton.style.transition = 'transform 0.5s ease'; // Adjust duration and easing as needed
+        scrollToTopButton.style.transform = 'scale(0)'; // Example transform
+        setTimeout(() => {
+          scrollToTopButton.style.display = 'none';
+        }, 500); // Adjust delay to match transition duration
+      }
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    },
+    toggleTableOfContents(currentClicked) {
+      this.isClicked = currentClicked
+      console.log(this.isClicked)
+    }
+  }
+};
+</script>
+
 <template>
   <div class="container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
     <div class="flex flex-col lg:grid lg:grid-cols-11 lg:gap-8">
@@ -322,136 +456,3 @@
     </div>
   </div>
 </template>
-
-<script>
-// useHead({
-//   title: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
-//   meta: [
-//     {
-//       property: "og:title",
-//       content: "รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด",
-//     },
-//     {
-//       name: 'description',
-//       content: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-//     },
-//     {
-//       property: "og:description",
-//       content: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-//     },
-//   ],
-//   bodyAttrs: {
-//     class: ''
-//   },
-//   // script: [{ innerHTML: 'console.log(\'Hello world\')' }]
-// })
-
-import blue_print_product1 from '../static/json/blue_prints/blue_print_product1.json'
-import detail_table_product1 from '../static/json/detail_tables/detail_table_product1.json'
-import detail_table_product2 from '../static/json/detail_tables/detail_table_product2.json'
-import table_of_content from '../static/json/table_of_content.json'
-
-export default {
-  setup() {
-    useSeoMeta({
-      viewport: 'width=device-width, initial-scale=1.0',
-
-      title: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
-      description: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-      keywords: 'Precast Concrete',
-
-      ogType: 'website',
-      ogTitle: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
-      ogDescription: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-      ogImage: '/assets/images/products_service/1/2.jpg',
-      ogUrl: 'https://www.siamnamrin.com/products_service',
-      ogSiteName: 'siamnamrin.com',
-      ogLocale: 'th_TH',
-
-      // twitterCard: 'summary_large_image',
-      // twitterSite: 'siamnamrin.com',
-      // twitterTitle: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
-      // twitterDescription: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-    })
-    const blueprintsProd1 = blue_print_product1
-    const detailsProduct1 = detail_table_product1
-    const detailsProduct2 = detail_table_product2
-    const tableOfContents = table_of_content
-    const route = useRoute()
-
-    const classScrollH2 = ref('scroll-mt-[calc(40px+40px+var(--header-height))] lg:scroll-mt-[calc(40px+var(--header-height))]')
-    const classScrollH4 = ref('scroll-mt-[calc(30px+30px+var(--header-height))] lg:scroll-mt-[calc(30px+var(--header-height))]')
-
-    const isClicked = ref(false)
-
-    const carouselLinks = [
-      {
-        src: "/images/products_service/1/2.jpg",
-        alt: "รางน้ำคอนกรีตสำเร็จรูป",
-      },
-      {
-        src: "/images/products_service/2/5.jpg",
-        alt: "ผนังสำเร็จรูป ระบบ Knockdown",
-      },
-      {
-        src: "/images/products_service/3/2.jpg",
-        alt: "แสลทปูพื้นคอนกรีตสำเร็จรูป",
-      },
-      {
-        src: "/images/products_service/4/3.jpg",
-        alt: "ระบบ เสา คาน ตอม่อ สำเร็จรูป",
-      },
-      {
-        src: "/images/products_service/5/5.jpg",
-        alt: "สแลทพ่อพันธุ์ สแลทคอกคลอด ผนังคอกหมูขุน",
-      },
-      {
-        src: "/images/products_service/6/4.jpg",
-        alt: "รั้วและกำแพงคอนกรีตสำเร็จรูป",
-      },
-    ]
-    return {
-      blueprintsProd1,
-      detailsProduct1,
-      detailsProduct2,
-      tableOfContents,
-      route,
-      classScrollH2,
-      classScrollH4,
-      isClicked,
-      carouselLinks,
-    };
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      const scrollToTopButton = this.$refs.scrollToTopButton;
-      if (window.pageYOffset > 100) {
-        scrollToTopButton.style.display = 'block';
-        scrollToTopButton.style.transition = 'transform 0.5s ease'; // Adjust duration and easing as needed
-        scrollToTopButton.style.transform = 'scale(1)'; // Example transform
-      } else {
-        scrollToTopButton.style.transition = 'transform 0.5s ease'; // Adjust duration and easing as needed
-        scrollToTopButton.style.transform = 'scale(0)'; // Example transform
-        setTimeout(() => {
-          scrollToTopButton.style.display = 'none';
-        }, 500); // Adjust delay to match transition duration
-      }
-    },
-    scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    },
-    toggleTableOfContents(currentClicked) {
-      isClicked.value = currentClicked
-    }
-  }
-};
-</script>
