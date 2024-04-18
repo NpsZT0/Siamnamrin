@@ -48,7 +48,7 @@ const carouselLinks = [
         <!-- End Slider -->
         <div class="w-auto h-auto p-8">
             <section>
-                <h1 class="text-4xl font-extrabold text-primary">
+                <h1 class="text-4xl font-extrabold text-secondary">
                     บริษัท สยามน้ำริน จำกัด
                 </h1>
                 <p id="P1" class="text-xl whitespace-pre-line">
