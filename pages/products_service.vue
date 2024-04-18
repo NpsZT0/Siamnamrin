@@ -99,9 +99,11 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.scrollSpy);
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.scrollSpy);
   },
   methods: {
     handleScroll() {
@@ -123,6 +125,34 @@ export default {
         top: 0,
         behavior: 'smooth'
       });
+    },
+    scrollSpy() {
+      const navTopHeight = 72 + 40;
+      const menuItems = document.querySelectorAll(".link-items");
+      const scrollItems = document.querySelectorAll(".section");
+      let fromTop = window.pageYOffset + window.innerHeight / 2 + navTopHeight + 40;
+      let cur = [];
+      let lastId
+      [...scrollItems].forEach(function (item) {
+        if (item.offsetTop < fromTop) {
+          cur.push(item);
+        }
+      });
+
+      cur = cur[cur.length - 1];
+      let id = cur ? cur.id : "";
+
+      // Assuming lastId is defined in the component's data
+      if (lastId !== id) {
+        lastId = id;
+
+        menuItems.forEach(function (elem, index) {
+          elem.classList.remove("text-primary");
+
+          const filteredItems = [...menuItems].filter(elem => elem.getAttribute("href").slice(17) === `#${id}`);
+          filteredItems[0].classList.add("text-primary");
+        });
+      }
     },
     toggleTableOfContents(currentClicked) {
       this.isClicked = currentClicked
@@ -154,20 +184,11 @@ export default {
               <Carousel :links="carouselLinks" />
             </div>
           </div>
-          <div>
-            <!-- Your content here -->
-            <button ref="scrollToTopButton" @click="scrollToTop"
-              class="fixed p-2 text-center rounded-full transform bottom-[5%] left-[50%] backdrop-blur bg-primary/50 z-[2]">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-              </svg>
-            </button>
-          </div>
+
           <!-- Product 1 -->
           <div class="mt-8">
             <!-- Section 1 -->
-            <section id="รางระบายน้ำคอนกรีตสำเร็จรูป-พร้อมฝาปิด" :class="classScrollH2">
+            <section id="รางระบายน้ำคอนกรีตสำเร็จรูป-พร้อมฝาปิด" class="section" :class="classScrollH2">
               <h2 class="text-2xl font-bold sm:text-3xl text-start">
                 <Hashtag name="รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด" href="#รางระบายน้ำคอนกรีตสำเร็จรูป-พร้อมฝาปิด" />
               </h2>
@@ -210,7 +231,7 @@ export default {
             </div>
 
             <!-- Section 2 -->
-            <section id="ตัวอย่าง-รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ-บริษัทสยามน้ำรินจำกัด"
+            <section id="ตัวอย่าง-รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ-บริษัทสยามน้ำรินจำกัด" class="section"
               :class="classScrollH4">
               <h4 class="mt-4 text-lg font-semibold leading-6 sm:text-xl text-start">
                 <Hashtag name="ตัวอย่าง รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ บริษัทสยามน้ำรินจำกัด"
@@ -242,7 +263,7 @@ export default {
             </section>
 
             <!-- Section 3 -->
-            <section id="ตาราง-รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ-SNR" :class="classScrollH4">
+            <section id="ตาราง-รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ-SNR" class="section" :class="classScrollH4">
               <h4 class="mt-4 text-lg font-semibold leading-6 sm:text-xl text-start">
                 <Hashtag name="ตาราง รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ SNR (บางส่วน)"
                   href="#ตาราง-รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ-SNR" />
@@ -315,7 +336,7 @@ export default {
           <!-- Product 2 -->
           <div class="pt-8">
             <!-- Section 1 -->
-            <section id="แผ่นสแลทปูพื้นคอกสำเร็จรูป" :class="classScrollH2">
+            <section id="แผ่นสแลทปูพื้นคอกสำเร็จรูป" class="section" :class="classScrollH2">
               <h2 class="text-2xl font-bold sm:text-3xl text-start">
                 <Hashtag name="แผ่นสแลทปูพื้นคอกสำเร็จรูป" href="#แผ่นสแลทปูพื้นคอกสำเร็จรูป" />
               </h2>
@@ -359,7 +380,7 @@ export default {
             </div>
 
             <!-- Section 2 -->
-            <section id="ตัวอย่าง-ขนาดแผ่นสแลทปูพื้นคอกสำเร็จรูปบางขนาดของ-SNR" :class="classScrollH4">
+            <section id="ตัวอย่าง-ขนาดแผ่นสแลทปูพื้นคอกสำเร็จรูปบางขนาดของ-SNR" class="section" :class="classScrollH4">
               <h4 class="mt-4 text-lg font-semibold leading-6 sm:text-xl text-start">
                 <Hashtag name="ตัวอย่าง ขนาดแผ่นสแลทปูพื้นคอกสำเร็จรูปบางขนาดของ SNR"
                   href="#ตัวอย่าง-ขนาดแผ่นสแลทปูพื้นคอกสำเร็จรูปบางขนาดของ-SNR" />
@@ -401,10 +422,6 @@ export default {
                   </tbody>
                 </table>
 
-
-
-
-
               </div>
             </section>
           </div>
@@ -414,7 +431,7 @@ export default {
 
       <!-- Table of Contents -->
       <aside
-        class="lg:col-span-3 order-first lg:order-last sticky top-[--header-height] backdrop-blur group -mx-4 sm:-mx-6 px-4 sm:px-6 lg:px-4 lg:-mx-4 overflow-y-auto max-h-[calc(100vh-var(--header-height))] z-[0]">
+        class="lg:col-span-3 order-first lg:order-last sticky top-[--header-height] backdrop-blur group -mx-4 sm:-mx-6 px-4 sm:px-6 lg:px-4 lg:-mx-4 overflow-y-auto max-h-[calc(100vh-var(--header-height))] z-[1] lg:z-[0]">
         <nav>
           <div class="border-b border-gray-200 border-dashed lg:py-8 lg:border-0">
             <button class="py-3 flex items-center gap-1.5 lg:cursor-text lg:select-text w-full h-full group lg:disabled"
@@ -430,29 +447,34 @@ export default {
               </span>
             </button>
             <ul :class="isClicked ? 'space-y-1 lg:block' : 'hidden space-y-1 lg:block'">
-              <li v-for="content in tableOfContents"
+              <li v-for="(content, index) in tableOfContents"
                 :class="isClicked ? 'space-y-1 lg:block' : 'hidden space-y-1 lg:block'">
-                <!-- <div v-if="route.fullPath === content.href" class="lg:block"> -->
-                <NuxtLink :key="content.name" :to="content.href"
+                <NuxtLink :key="content.name" :to="content.href" class="link-items" :id="'link-' + (index + 1)"
                   :class="route.fullPath === content.href ? 'block text-primary truncate text-sm/6' : 'block text-gray-600 truncate text-sm/6 hover:text-gray-700'">
                   {{ content.name }}
                 </NuxtLink>
                 <ul v-if="content.children" class="space-y-1">
                   <li v-for="child in content.children" class="ml-3 space-y-1">
-                    <NuxtLink :key="child.name" :to="child.href"
+                    <NuxtLink :key="child.name" :to="child.href" class="link-items" :id="'link-' + (index + 1)"
                       :class="route.fullPath === child.href ? 'block text-primary truncate text-sm/6' : 'block text-gray-600 truncate text-sm/6 hover:text-gray-700'">
                       {{ child.name }}
                     </NuxtLink>
                   </li>
                 </ul>
-                <!-- </div> -->
               </li>
             </ul>
           </div>
         </nav>
       </aside>
-      <!-- class="absolute bottom-[16rem] right-[4rem] z-[1]" -->
 
+      <!-- Scroll to top -->
+      <button ref="scrollToTopButton" @click="scrollToTop"
+        class="fixed p-2 text-center rounded-full transform bottom-4 right-4 backdrop-blur bg-primary/75 z-[2]">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 text-gray-200 lg:w-8 lg:h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+        </svg>
+      </button>
     </div>
   </div>
 </template>
