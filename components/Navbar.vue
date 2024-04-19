@@ -5,7 +5,7 @@ const route = useRoute()
 </script>
 
 <template>
-    <header id="navbar-top" class="sticky top-0 z-[5] -mb-px backdrop-blur border-b border-gray-200 lg:border-0 lg:mb-0 navbar ">
+    <header id="navbar-top" class="sticky top-0 z-[1] -mb-px backdrop-blur border-b border-gray-200 lg:border-0 lg:mb-0 navbar ">
         <div class="flex-none lg:hidden">
             <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
