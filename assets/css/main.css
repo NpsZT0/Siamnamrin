@@ -9,3 +9,11 @@
 :root {
     --header-height: 4rem;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    appearance: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}

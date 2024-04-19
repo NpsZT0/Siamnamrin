@@ -1,167 +1,3 @@
-<script>
-// useHead({
-//   title: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
-//   meta: [
-//     {
-//       property: "og:title",
-//       content: "รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด",
-//     },
-//     {
-//       name: 'description',
-//       content: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-//     },
-//     {
-//       property: "og:description",
-//       content: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-//     },
-//   ],
-//   bodyAttrs: {
-//     class: ''
-//   },
-//   // script: [{ innerHTML: 'console.log(\'Hello world\')' }]
-// })
-
-import blue_print_product1 from '../static/json/blue_prints/blue_print_product1.json'
-import detail_table_product1 from '../static/json/detail_tables/detail_table_product1.json'
-import detail_table_product2 from '../static/json/detail_tables/detail_table_product2.json'
-import table_of_content from '../static/json/table_of_content.json'
-
-export default {
-  setup() {
-    useSeoMeta({
-      viewport: 'width=device-width, initial-scale=1.0',
-
-      title: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
-      description: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-      keywords: 'Precast Concrete',
-
-      ogType: 'website',
-      ogTitle: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
-      ogDescription: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-      ogImage: '/assets/images/products_service/1/2.jpg',
-      ogUrl: 'https://www.siamnamrin.com/products_service',
-      ogSiteName: 'siamnamrin.com',
-      ogLocale: 'th_TH',
-
-      // twitterCard: 'summary_large_image',
-      // twitterSite: 'siamnamrin.com',
-      // twitterTitle: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
-      // twitterDescription: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
-    })
-    const blueprintsProd1 = blue_print_product1
-    const detailsProduct1 = detail_table_product1
-    const detailsProduct2 = detail_table_product2
-    const tableOfContents = table_of_content
-    const route = useRoute()
-
-    const classScrollH2 = ref('scroll-mt-[calc(40px+40px+var(--header-height))] lg:scroll-mt-[calc(40px+var(--header-height))]')
-    const classScrollH4 = ref('scroll-mt-[calc(30px+30px+var(--header-height))] lg:scroll-mt-[calc(30px+var(--header-height))]')
-
-    const isClicked = ref(false)
-
-    const carouselLinks = [
-      {
-        src: "/images/products_service/1/2.jpg",
-        alt: "รางน้ำคอนกรีตสำเร็จรูป",
-      },
-      {
-        src: "/images/products_service/2/5.jpg",
-        alt: "ผนังสำเร็จรูป ระบบ Knockdown",
-      },
-      {
-        src: "/images/products_service/3/2.jpg",
-        alt: "แสลทปูพื้นคอนกรีตสำเร็จรูป",
-      },
-      {
-        src: "/images/products_service/4/3.jpg",
-        alt: "ระบบ เสา คาน ตอม่อ สำเร็จรูป",
-      },
-      {
-        src: "/images/products_service/5/5.jpg",
-        alt: "สแลทพ่อพันธุ์ สแลทคอกคลอด ผนังคอกหมูขุน",
-      },
-      {
-        src: "/images/products_service/6/4.jpg",
-        alt: "รั้วและกำแพงคอนกรีตสำเร็จรูป",
-      },
-    ]
-    return {
-      blueprintsProd1,
-      detailsProduct1,
-      detailsProduct2,
-      tableOfContents,
-      route,
-      classScrollH2,
-      classScrollH4,
-      isClicked,
-      carouselLinks,
-    };
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener("scroll", this.scrollSpy);
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener("scroll", this.scrollSpy);
-  },
-  methods: {
-    handleScroll() {
-      const scrollToTopButton = this.$refs.scrollToTopButton;
-      if (window.pageYOffset > 100) {
-        scrollToTopButton.style.display = 'block';
-        scrollToTopButton.style.transition = 'transform 0.5s ease'; // Adjust duration and easing as needed
-        scrollToTopButton.style.transform = 'scale(1)'; // Example transform
-      } else {
-        scrollToTopButton.style.transition = 'transform 0.5s ease'; // Adjust duration and easing as needed
-        scrollToTopButton.style.transform = 'scale(0)'; // Example transform
-        setTimeout(() => {
-          scrollToTopButton.style.display = 'none';
-        }, 500); // Adjust delay to match transition duration
-      }
-    },
-    scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    },
-    scrollSpy() {
-      const navTopHeight = 72 + 40;
-      const menuItems = document.querySelectorAll(".link-items");
-      const scrollItems = document.querySelectorAll(".section");
-      let fromTop = window.pageYOffset + window.innerHeight / 2 + navTopHeight + 40;
-      let cur = [];
-      let lastId
-      [...scrollItems].forEach(function (item) {
-        if (item.offsetTop < fromTop) {
-          cur.push(item);
-        }
-      });
-
-      cur = cur[cur.length - 1];
-      let id = cur ? cur.id : "";
-
-      // Assuming lastId is defined in the component's data
-      if (lastId !== id) {
-        lastId = id;
-
-        menuItems.forEach(function (elem, index) {
-          elem.classList.remove("text-primary");
-
-          const filteredItems = [...menuItems].filter(elem => elem.getAttribute("href").slice(17) === `#${id}`);
-          filteredItems[0].classList.add("text-primary");
-        });
-      }
-    },
-    toggleTableOfContents(currentClicked) {
-      this.isClicked = currentClicked
-      console.log(this.isClicked)
-    }
-  }
-};
-</script>
-
 <template>
   <div class="container px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
     <div class="flex flex-col lg:grid lg:grid-cols-11 lg:gap-8">
@@ -180,252 +16,22 @@ export default {
               เราเสนอสินค้าที่มีคุณภาพสูงที่สุดและมาพร้อมกับความคุ้มค่าที่ยอดเยี่ยม
               ไม่ว่าคุณกำลังก่อสร้างบ้านหรือโครงการใหญ่ ๆ เรามีทุกอย่างที่คุณต้องการเพื่อให้โครงการของคุณประสบความสำเร็จ
             </p>
-            <div class="p-2 rounded-md lg:p-4 bg-gray-300/75">
+            <div class="p-2 mt-4 rounded-md lg:p-4 bg-gray-300/75">
               <Carousel :links="carouselLinks" />
             </div>
           </div>
 
           <!-- Product 1 -->
-          <div class="mt-8">
-            <!-- Section 1 -->
-            <section id="รางระบายน้ำคอนกรีตสำเร็จรูป-พร้อมฝาปิด" class="section" :class="classScrollH2">
-              <h2 class="text-2xl font-bold sm:text-3xl text-start">
-                <Hashtag name="รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด" href="#รางระบายน้ำคอนกรีตสำเร็จรูป-พร้อมฝาปิด" />
-              </h2>
-              <p class="text-gray-500 text-start">
-                รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน
-                สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด
-                ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก
-              </p>
-            </section>
-
-            <!-- Images -->
-            <div class="grid grid-cols-6 grid-rows-2 gap-1 lg:gap-3 h-[150px] md:h-[250px] lg:h-[350px] mt-2">
-
-              <div class="col-span-4 col-start-1 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/1/5.jpg" alt="banner5" />
-              </div>
-              <div class="col-span-2 col-end-7 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/1/3.jpg" alt="banner3" />
-              </div>
-
-              <div class="col-span-3 col-start-1 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/1/6.jpg" alt="banner6" />
-              </div>
-              <div class="col-span-1 col-start-4 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/1/4.jpg" alt="banner4" />
-              </div>
-              <div class="col-span-2 col-end-7 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/1/7.jpg" alt="banner7" />
-              </div>
-            </div>
-
-            <!-- Section 2 -->
-            <section id="ตัวอย่าง-รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ-บริษัทสยามน้ำรินจำกัด" class="section"
-              :class="classScrollH4">
-              <h4 class="mt-4 text-lg font-semibold leading-6 sm:text-xl text-start">
-                <Hashtag name="ตัวอย่าง รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ บริษัทสยามน้ำรินจำกัด"
-                  href="#ตัวอย่าง-รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ-บริษัทสยามน้ำรินจำกัด" />
-              </h4>
-              <div class="mt-2 space-y-3">
-                <ul v-for="(blueprint, index) in blueprintsProd1" class="leading-5 ">
-                  <li class="flex text-gray-500 w-fit h-fit">
-                    <div v-if="typeof (blueprint.name) == 'object' || typeof (blueprint.href) == 'object'">
-                      <NuxtLink :key="index" :to="blueprint.href[0]" target="_blank" class="hover:text-primary">
-                        {{ blueprint.name[0] }}
-                      </NuxtLink>&nbsp;|&nbsp;
-                      <NuxtLink :key="index" :to="blueprint.href[1]" target="_blank" class="hover:text-primary">
-                        {{ blueprint.name[1] }}
-                      </NuxtLink>
-                    </div>
-                    <div v-else>
-                      <NuxtLink :key="index" :to="blueprint.href" target="_blank" class="hover:text-primary">
-                        {{ blueprint.name }}
-                      </NuxtLink>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-2 h-2 min-w-2 min-h-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            <!-- Section 3 -->
-            <section id="ตาราง-รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ-SNR" class="section" :class="classScrollH4">
-              <h4 class="mt-4 text-lg font-semibold leading-6 sm:text-xl text-start">
-                <Hashtag name="ตาราง รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ SNR (บางส่วน)"
-                  href="#ตาราง-รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิดของ-SNR" />
-              </h4>
-              <div class="mt-2 overflow-x-auto">
-                <table class="table w-full">
-                  <thead>
-                    <tr class="text-sm">
-                      <th></th>
-                      <th>ขนาด <strong class="text-gray-600">รางน้ำคอนกรีต</strong> SNR</th>
-                      <th>ขนาด <strong class="text-gray-600">ฝารางน้ำคอนกรีต</strong> SNR</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="(item, index) in detailsProduct1" :key="index">
-                      <th>{{ index + 1 }}</th>
-
-                      <td>
-                        <div class="flex space-x-2">
-                          <div class="flex space-x-2 text-nowrap">
-                            <div v-if="item.uditch_1.size != '-'">{{ item.uditch_1.size }} {{ item.uditch_1.unit }}.
-                            </div>
-                            <div v-else>{{ item.uditch_1.size }}</div>
-                          </div>
-                          <div v-if="item.uditch_1.thickness" class="text-gray-200">
-                            |
-                          </div>
-                          <div v-if="item.uditch_1.thickness" class=" text-nowrap">
-                            หนา
-                            {{ item.uditch_1.thickness }} {{ item.uditch_1.unit }}.
-                          </div>
-                          <div v-if="item.uditch_1.details" class="text-gray-200">
-                            |
-                          </div>
-                          <div v-if="item.uditch_1.details" class=" text-nowrap">
-                            {{ item.uditch_1.details }}
-                          </div>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="flex space-x-2">
-                          <div class="flex space-x-2 text-nowrap">
-                            <div v-if="item.uditch_2.size != '-'">{{ item.uditch_2.size }} {{ item.uditch_2.unit }}.
-                            </div>
-                            <div v-else>{{ item.uditch_2.size }}</div>
-                          </div>
-                          <div v-if="item.uditch_2.thickness" class="text-gray-200">
-                            |
-                          </div>
-                          <div v-if="item.uditch_2.thickness" class=" text-nowrap">
-                            หนา
-                            {{ item.uditch_2.thickness }} {{ item.uditch_1.unit }}.
-                          </div>
-                          <div v-if="item.uditch_2.details" class="text-gray-200">
-                            |
-                          </div>
-                          <div v-if="item.uditch_2.details" class=" text-nowrap">
-                            {{ item.uditch_2.details }}
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          </div>
+          <ProductsServiceProd1 :classScrollH2="classScrollH2" :classScrollH4="classScrollH4"
+            :blueprintsProd1="blueprintsProd1" :detailsProduct1="detailsProduct1" />
 
           <!-- Product 2 -->
-          <div class="pt-8">
-            <!-- Section 1 -->
-            <section id="แผ่นสแลทปูพื้นคอกสำเร็จรูป" class="section" :class="classScrollH2">
-              <h2 class="text-2xl font-bold sm:text-3xl text-start">
-                <Hashtag name="แผ่นสแลทปูพื้นคอกสำเร็จรูป" href="#แผ่นสแลทปูพื้นคอกสำเร็จรูป" />
-              </h2>
-              <p class="text-gray-500 text-start">
-                แสลทปูพื้นสำเร็จรูป SNR ผลิตจากคอนกรีตเสริมเหล็กซึ่งมีความคงทนแข็งแกร่ง
-                โดยใช้เทคโนโลยีแบบเดียวกันกับต่างประเทศ ประกอบง่าย ๆ ประหยัดทั้งเวลา ทั้งแรงงาน
-                และที่สำคัญประหยัดค่าใช้จ่ายไม่มีบานปลาย บริษัทสยามน้ำรินจำกัด มีแสลทปูพื้น มีให้เลือก หลายแบบ หลายขนาด
-                เข้ากับการใช้งานได้อย่างมีคุณภาพ
-              </p>
-            </section>
+          <ProductsServiceProd2 :classScrollH2="classScrollH2" :classScrollH4="classScrollH4"
+            :detailsProduct2="detailsProduct2" />
 
-            <!-- Images -->
-            <div class="grid grid-cols-6 grid-rows-2 gap-1 lg:gap-3 h-[150px] md:h-[250px] lg:h-[350px] mt-2">
-
-              <div class="col-span-4 col-start-1 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/2/1.jpg" alt="banner5" />
-              </div>
-              <div class="col-span-2 col-end-7 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/2/3.jpg" alt="banner3" />
-              </div>
-
-              <div class="col-span-3 col-start-1 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/2/4.jpg" alt="banner6" />
-              </div>
-              <div class="col-span-1 col-start-4 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/2/2.jpg" alt="banner4" />
-              </div>
-              <div class="col-span-2 col-end-7 overflow-hidden rounded-md">
-                <img
-                  class="object-cover w-full h-full transition-transform duration-500 ease-in-out rounded-md hover:scale-105"
-                  src="/assets/images/products_service/2/5.jpg" alt="banner7" />
-              </div>
-            </div>
-
-            <!-- Section 2 -->
-            <section id="ตัวอย่าง-ขนาดแผ่นสแลทปูพื้นคอกสำเร็จรูปบางขนาดของ-SNR" class="section" :class="classScrollH4">
-              <h4 class="mt-4 text-lg font-semibold leading-6 sm:text-xl text-start">
-                <Hashtag name="ตัวอย่าง ขนาดแผ่นสแลทปูพื้นคอกสำเร็จรูปบางขนาดของ SNR"
-                  href="#ตัวอย่าง-ขนาดแผ่นสแลทปูพื้นคอกสำเร็จรูปบางขนาดของ-SNR" />
-              </h4>
-              <div class="mt-2 overflow-x-auto">
-                <table class="table w-full">
-                  <thead>
-                    <tr class="text-sm">
-                      <th></th>
-                      <th>ขนาด <strong class="text-gray-600">แผ่นสแลทปูน</strong> SNR</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="(item, index) in detailsProduct2" :key="index">
-                      <th>{{ index + 1 }}</th>
-
-                      <td>
-                        <div class="flex space-x-2">
-                          <div class="flex space-x-2 text-nowrap">
-                            <div v-if="item.uditch_1.size != '-'">{{ item.uditch_1.size }} {{ item.uditch_1.unit }}.
-                            </div>
-                            <div v-else>{{ item.uditch_1.size }}</div>
-                          </div>
-                          <div v-if="item.uditch_1.thickness" class="text-gray-200">
-                            |
-                          </div>
-                          <div v-if="item.uditch_1.thickness" class=" text-nowrap">
-                            ({{ item.uditch_1.thickness }})
-                          </div>
-                          <div v-if="item.uditch_1.details" class="text-gray-200">
-                            |
-                          </div>
-                          <div v-if="item.uditch_1.details" class=" text-nowrap">
-                            ({{ item.uditch_1.details }})
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-
-              </div>
-            </section>
-          </div>
-
+          <!-- Product 3 -->
+          <ProductsServiceProd3 :classScrollH2="classScrollH2" :classScrollH4="classScrollH4"
+            :blueprintsProd3="blueprintsProd3" :detailsProduct3="detailsProduct3" />
         </div>
       </article>
 
@@ -468,13 +74,122 @@ export default {
       </aside>
 
       <!-- Scroll to top -->
-      <button ref="scrollToTopButton" @click="scrollToTop"
-        class="fixed p-2 text-center rounded-full transform bottom-4 right-4 backdrop-blur bg-primary/75 z-[2]">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-6 h-6 text-gray-200 lg:w-8 lg:h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-        </svg>
-      </button>
+      <ScrollToTopButton />
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  viewport: 'width=device-width, initial-scale=1.0',
+
+  title: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
+  description: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
+  keywords: 'Precast Concrete',
+
+  ogType: 'website',
+  ogTitle: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
+  ogDescription: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
+  ogImage: '/images/products_service/1/2.jpg',
+  ogUrl: 'https://www.siamnamrin.com/products_service',
+  ogSiteName: 'siamnamrin.com',
+  ogLocale: 'th_TH',
+
+  // twitterCard: 'summary_large_image',
+  // twitterSite: 'siamnamrin.com',
+  // twitterTitle: 'รางระบายน้ำคอนกรีตสำเร็จรูป พร้อมฝาปิด',
+  // twitterDescription: 'รางระบายน้ำคอนกรีตสำเร็จรูปพร้อมฝาปิด ของบริษัทสยามน้ำรินจำกัด มีความ แข็งแรงทนทาน สะดวกในการติดตั้งใช้เวลาน้อย รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก',
+})
+
+// Json data
+import blue_print_product1 from '../static/json/blue_prints/blue_print_product1.json'
+import blue_print_product3 from '../static/json/blue_prints/blue_print_product3.json'
+import detail_table_product1 from '../static/json/detail_tables/detail_table_product1.json'
+import detail_table_product2 from '../static/json/detail_tables/detail_table_product2.json'
+import detail_table_product3 from '../static/json/detail_tables/detail_table_product3.json'
+import table_of_content from '../static/json/table_of_content.json'
+
+const blueprintsProd1 = blue_print_product1
+const blueprintsProd3 = blue_print_product3
+const detailsProduct1 = detail_table_product1
+const detailsProduct2 = detail_table_product2
+const detailsProduct3 = detail_table_product3
+const tableOfContents = table_of_content
+
+// Vue Composition API
+const route = useRoute()
+const classScrollH2 = ref('scroll-mt-[calc(40px+40px+var(--header-height))] lg:scroll-mt-[calc(40px+var(--header-height))]')
+const classScrollH4 = ref('scroll-mt-[calc(30px+30px+var(--header-height))] lg:scroll-mt-[calc(30px+var(--header-height))]')
+const isClicked = ref(false)
+
+// Variables
+const carouselLinks = [
+  {
+    src: "/images/products_service/1/2.jpg",
+    alt: "รางน้ำคอนกรีตสำเร็จรูป",
+  },
+  {
+    src: "/images/products_service/2/5.jpg",
+    alt: "ผนังสำเร็จรูป ระบบ Knockdown",
+  },
+  {
+    src: "/images/products_service/3/2.jpg",
+    alt: "แสลทปูพื้นคอนกรีตสำเร็จรูป",
+  },
+  {
+    src: "/images/products_service/4/3.jpg",
+    alt: "ระบบ เสา คาน ตอม่อ สำเร็จรูป",
+  },
+  {
+    src: "/images/products_service/5/5.jpg",
+    alt: "สแลทพ่อพันธุ์ สแลทคอกคลอด ผนังคอกหมูขุน",
+  },
+  {
+    src: "/images/products_service/6/4.jpg",
+    alt: "รั้วและกำแพงคอนกรีตสำเร็จรูป",
+  },
+]
+
+// Functions
+const scrollSpy = () => {
+  const navTopHeight = 72 + 40;
+  const menuItems = document.querySelectorAll(".link-items");
+  const scrollItems = document.querySelectorAll(".section");
+  let fromTop = window.pageYOffset + navTopHeight + 40;
+  let cur = [];
+  let lastId
+  [...scrollItems].forEach(function (item) {
+    if (item.offsetTop < fromTop) {
+      cur.push(item);
+    }
+  });
+
+  cur = cur[cur.length - 1];
+  let id = cur ? cur.id : "";
+
+  // Assuming lastId is defined in the component's data
+  if (lastId !== id) {
+    lastId = id;
+
+    if (menuItems.length) {
+      menuItems.forEach(function (elem, index) {
+        elem.classList.remove("text-primary");
+
+        const filteredItems = [...menuItems].filter(elem => elem.getAttribute("href").slice(17) === `#${id}`);
+        if (filteredItems.length > 0) {
+          filteredItems[0].classList.add("text-primary");
+        }
+      });
+    }
+  }
+}
+const toggleTableOfContents = (currentClicked) => {
+  isClicked.value = currentClicked
+  console.log(isClicked)
+}
+
+// Listen for scroll event on mount
+onMounted(() => {
+  window.addEventListener('scroll', scrollSpy);
+})
+</script>

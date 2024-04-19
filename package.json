@@ -14,7 +14,6 @@
     "fix": "gts fix"
   },
   "dependencies": {
-    "@heroicons/vue": "^2.1.3",
     "@nuxt/image": "^1.5.0",
     "@vercel/speed-insights": "^1.0.10",
     "nuxt": "^3.11.2",
@@ -23,8 +22,12 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@nuxtjs/web-vitals": "^0.2.6",
     "@types/node": "20.11.5",
+    "@vesp/nuxt-fontawesome": "^1.0.4",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.10.1",
     "postcss": "^8.4.38",

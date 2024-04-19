@@ -526,5 +526,13 @@
             "details": "3×13",
             "unit": "ซม"
         }
+    },
+    {
+        "uditch_1": {
+            "size": "80×220×8",
+            "thickness": "0.8",
+            "details": "5×8",
+            "unit": "ซม"
+        }
     }
 ]

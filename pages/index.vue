@@ -9,7 +9,7 @@ useSeoMeta({
     ogType: 'website',
     ogTitle: 'บริษัท สยามน้ำริน จำกัด',
     ogDescription: 'สินค้า คอนกรีต สำเร็จรูป รวมถึงงานออกแบบ และงานก่อสร้าง บริษัทสยามน้ำรินจำกัด มีเจ้าหน้าที่เป็นผู้เชี่ยวชาญด้านการออกแบบและวางระบบต่าง ๆ โดยเฉพาะ โรงเลี้ยงสัตว์ ฟาร์มสัตว์ บ้าน หรือโรงงาน โปรดรับ บริษัทสยามน้ำรินจำกัด เป็นอีกหนึ่งทางเลือก ทางบริษัทฯ ยินดีรับฟัง และ พร้อมให้คำแนะนำ เพื่อประโยชน์สูงสุดของลูกค้า เน้น คุณภาพ และ รับประกันราคา จากโรงงานแน่นอน',
-    ogImage: '/assets/images/products_service/1/5.jpg',
+    ogImage: '/images/products_service/1/5.jpg',
     ogUrl: 'https://www.siamnamrin.com/',
     ogSiteName: 'siamnamrin.com',
     ogLocale: 'th_TH',
@@ -44,7 +44,8 @@ const carouselLinks = [
 <template>
     <div class="mx-auto">
         <!-- Slider -->
-        <Carousel v-bind:links="carouselLinks"/>
+        <Carousel :links="carouselLinks" />
+
         <!-- End Slider -->
         <div class="w-auto h-auto p-8">
             <section>
@@ -80,7 +81,7 @@ const carouselLinks = [
                     รักษาความสะอาดง่าย มีวิธีการเชื่อมต่อเป็นเนื้อเดียวกัน มีแบบฝาปิด ทั้งคอนกรีตหรือฝาตะแกรงเหล็ก
                 </p>
             </section>
-            <img src="/assets/images/home/banner1.jpg" alt="รางน้ำคอนกรีตสำเร็จรูป"
+            <img src="/images/home/banner1.jpg" alt="รางน้ำคอนกรีตสำเร็จรูป"
                 class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
             <br>
 
@@ -96,7 +97,7 @@ const carouselLinks = [
                     ไม้แบบ และอื่นๆ) สะดวก รวดเร็ว ประหยัดงบประมาณในการก่อสร้าง
                 </p>
             </section>
-            <img src="/assets/images/home/banner2.png" alt="ผนังสำเร็จรูป ระบบ Knockdown"
+            <img src="/images/home/banner2.png" alt="ผนังสำเร็จรูป ระบบ Knockdown"
                 class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
             <br>
 
@@ -111,7 +112,7 @@ const carouselLinks = [
                     หลายขนาด เข้ากับการใช้งานได้อย่างมีคุณภาพ
                 </p>
             </section>
-            <img src="/assets/images/home/banner3.png" alt="แสลทปูพื้นคอนกรีตสำเร็จรูป"
+            <img src="/images/home/banner3.png" alt="แสลทปูพื้นคอนกรีตสำเร็จรูป"
                 class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
             <br>
 
@@ -126,7 +127,7 @@ const carouselLinks = [
                     ประหยัดงบประมาณในการก่อสร้าง
                 </p>
             </section>
-            <img src="/assets/images/home/banner4.png" alt="ระบบ เสา คาน ตอม่อ สำเร็จรูป"
+            <img src="/images/home/banner4.png" alt="ระบบ เสา คาน ตอม่อ สำเร็จรูป"
                 class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
             <br>
 
@@ -164,7 +165,7 @@ const carouselLinks = [
                     ไม่สิ้นเปลืองวัสดุอื่น (เช่น ไม้แบบ และอื่นๆ) สะดวก รวดเร็ว ประหยัดงบประมาณในการก่อสร้าง
                 </p>
             </section>
-            <img src="/assets/images/home/banner5.png" alt="สแลทพ่อพันธุ์ สแลทคอกคลอด ผนังคอกหมูขุน"
+            <img src="/images/home/banner5.png" alt="สแลทพ่อพันธุ์ สแลทคอกคลอด ผนังคอกหมูขุน"
                 class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
             <br>
 
@@ -178,9 +179,12 @@ const carouselLinks = [
                     และ ราคาจากโรงงาน
                 </p>
             </section>
-            <img src="/assets/images/home/banner6.jpg" alt="รั้วและกำแพงคอนกรีตสำเร็จรูป"
+            <img src="/images/home/banner6.jpg" alt="รั้วและกำแพงคอนกรีตสำเร็จรูป"
                 class="w-full h-[200px] lg:h-[300px] object-cover" loading="lazy" />
             <br>
         </div>
+
+        <!-- Scroll to Top -->
+        <ScrollToTopButton />
     </div>
 </template>

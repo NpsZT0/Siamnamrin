@@ -30,6 +30,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxtjs/web-vitals',
+    '@vesp/nuxt-fontawesome',
   ],
 
   image: {
@@ -43,7 +44,6 @@ export default defineNuxtConfig({
       'xxl': 1536,
       '2xl': 1536
     },
-    dir: 'assets/images',
   },
 
   webVitals: {
@@ -52,4 +52,24 @@ export default defineNuxtConfig({
     disabled: false
   },
 
+  fontawesome: {
+    icons: {
+      solid: ['coffee', 'child'],
+      regular: ['comment'],
+      brands: ['twitter', 'facebook', 'line'],
+    },
+    proIcons: {
+      solid: [],
+      regular: [],
+      light: [],
+      thin: [],
+      duotone: [],
+    },
+    sharpIcons: {
+      solid: [],
+      regular: [],
+      light: [],
+      thin: [],
+    }
+  }
 })

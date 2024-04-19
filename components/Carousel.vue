@@ -52,7 +52,7 @@ defineProps<{
 
         <div class="absolute flex justify-center space-x-2 hs-carousel-pagination bottom-3 start-0 end-0">
             <span v-for="i in links.length" :key="i"
-                class="border border-gray-300 rounded-full cursor-pointer hs-carousel-active:bg-blue-500 hs-carousel-active:border-blue-500 size-3"></span>
+                class="border border-gray-500 border-solid rounded-md cursor-pointer hs-carousel-active:bg-blue-500 hs-carousel-active:border-blue-500 size-3"></span>
         </div>
     </div>
 </template>
